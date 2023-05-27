@@ -13,9 +13,9 @@ ____
 1. Установить  настроить webpack
 2. Мигрировать задание из Лабороторной работы №2 в окружение webpack
 
-![Работа webpack](img/report/webpack.png)
+![Работа webpack](src/img/report/webpack.png)
 
-![Мигрированное приложение](img/report/migrated_app.png)
+![Мигрированное приложение](src/img/report/migrated_app.png)
 
 ## Задание 2. Использование REST API
 
@@ -27,7 +27,7 @@ ____
 2. Создать веб-страницу со слайдером изображений.
 С помощью библиотеки  - [Swiper](https://swiperjs.com)
 
-![Виджет](img/report/widget.png)
+![Виджет](src/img/report/widget.png)
 
 
 
