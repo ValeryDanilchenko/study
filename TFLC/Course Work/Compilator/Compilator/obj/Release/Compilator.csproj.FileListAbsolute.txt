@@ -1,0 +1,15 @@
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\bin\Release\Compilator.exe.config
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\bin\Release\Compilator.exe.manifest
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\bin\Release\Compilator.application
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\bin\Release\Compilator.exe
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\bin\Release\Compilator.pdb
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.csproj.AssemblyReference.cache
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.csproj.SuggestedBindingRedirects.cache
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.Form1.resources
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.Properties.Resources.resources
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.csproj.GenerateResource.cache
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.csproj.CoreCompileInputs.cache
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.exe.manifest
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.application
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.exe
+C:\Users\Empar\Documents\Учеба\ТФЯК\Курсовая\Новая папка\Compilator\Compilator\obj\Release\Compilator.pdb
