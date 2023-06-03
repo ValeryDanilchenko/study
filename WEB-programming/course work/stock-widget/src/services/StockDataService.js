@@ -4,19 +4,42 @@ const API_KEY = 'TB46Y2SQFVGPS4U7';
 
 export default {
   async getStockData(symbol) {
-    const response = await fetch(
-      `https://www.alphavantage.co/query?function=TIME\_SERIES\_INTRADAY&symbol=${symbol}&interval=60min&apikey=${API_KEY}`
-    );
-    const data = await response.json();
-    const timeSeries = data['Time Series (60min)'];
+    const apiKey = "TB46Y2SQFVGPS4U7";
+    const url = `https://www.alphavantage.co/query?function=TIME\_SERIES\_INTRADAY&symbol=${this.symbol}&interval=60min&apikey=${apiKey}`;
 
-    const dates = Object.keys(timeSeries).slice(0, 24).reverse();
+    let timeSeries = null;
+
+      while (!timeSeries) {
+        try {
+          const response = await axios.get(url);
+          timeSeries = response.data["Time Series (60min)"];
+
+          if (!timeSeries) {
+            await new Promise(resolve => setTimeout(resolve, 10000)); // ждем 10 секунд перед следующим запросом
+          }
+        } catch (error) {
+          console.error("Error fetching stock data:", error);
+          await new Promise(resolve => setTimeout(resolve, 10000)); // ждем 10 секунд перед следующим запросом
+        }
+      }
+
+    const data = await response.json();
+    timeSeries = data['Time Series (60min)'];
+
+    // console.log(data, timeSeries);
+    // const dates = Object.keys(timeSeries).slice(0, 24).reverse();
     const prices = dates.map((date) => parseFloat(timeSeries[date]['4. close']));
+    // const dates = [];
+    // const prices = [];
+    // for (const time in timeSeries) {
+    //   dates.push(time.split(" ")[1].split(":")[0]);
+    //   prices.push(parseFloat(timeSeries[time]["4. close"]));
+    // }
 
     return {
       price: prices[prices.length - 1],
-      dates,
-      prices,
+      // dates,
+      // prices,
     };
   },
   async fetchStockPrice(symbol) {
@@ -40,3 +63,41 @@ export default {
     }
   },
 };
+
+
+// import axios from "axios";
+
+// const apiKey = "TB46Y2SQFVGPS4U7"; // Замените на свой API-ключ
+
+// const StockDataService = {
+//   async getStockData(symbol) {
+//     const url = `https://www.alphavantage.co/query?function=TIME\_SERIES\_INTRADAY&symbol=${symbol}&interval=60min&apikey=${apiKey}`;
+
+//     try {
+//       const response = await axios.get(url);
+//       const timeSeries = response.data["Time Series (60min)"];
+//       const dates = [];
+//       const prices = [];
+
+//       for (const time in timeSeries) {
+//         dates.push(time);
+//         prices.push(parseFloat(timeSeries[time]["4. close"]));
+//       }
+
+//       return {
+//         dates,
+//         prices,
+//         price: prices[prices.length - 1],
+//       };
+//     } catch (error) {
+//       console.error("Error fetching stock data:", error);
+//       return {
+//         dates: [],
+//         prices: [],
+//         price: 0,
+//       };
+//     }
+//   },
+// };
+
+// export default StockDataService;
