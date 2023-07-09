@@ -64,40 +64,63 @@ export default {
   },
 };
 
+// import axios from 'axios';
+// import fs from 'fs';
 
-// import axios from "axios";
+// const API_KEY = 'TB46Y2SQFVGPS4U7';
 
-// const apiKey = "TB46Y2SQFVGPS4U7"; // Замените на свой API-ключ
-
-// const StockDataService = {
+// export default {
 //   async getStockData(symbol) {
+//     const apiKey = "TB46Y2SQFVGPS4U7";
 //     const url = `https://www.alphavantage.co/query?function=TIME\_SERIES\_INTRADAY&symbol=${symbol}&interval=60min&apikey=${apiKey}`;
 
-//     try {
-//       const response = await axios.get(url);
-//       const timeSeries = response.data["Time Series (60min)"];
-//       const dates = [];
-//       const prices = [];
+//     let timeSeries = null;
 
-//       for (const time in timeSeries) {
-//         dates.push(time);
-//         prices.push(parseFloat(timeSeries[time]["4. close"]));
+//     while (!timeSeries) {
+//       try {
+//         const response = await axios.get(url);
+//         timeSeries = response.data["Time Series (60min)"];
+
+//         if (!timeSeries) {
+//           await new Promise(resolve => setTimeout(resolve, 10000)); // ждем 10 секунд перед следующим запросом
+//         }
+//       } catch (error) {
+//         console.error("Error fetching stock data:", error);
+//         await new Promise(resolve => setTimeout(resolve, 10000)); // ждем 10 секунд перед следующим запросом
 //       }
+//     }
 
-//       return {
-//         dates,
-//         prices,
-//         price: prices[prices.length - 1],
-//       };
+//     console.log('TimeSeries ', timeSeries);
+//     const data = {
+//       [symbol]: timeSeries,
+//     };
+
+//     fs.writeFileSync('stockData.json', JSON.stringify(data, null, 2));
+
+//     const prices = Object.keys(timeSeries).map((date) => parseFloat(timeSeries[date]['4. close']));
+
+//     return {
+//       price: prices[prices.length - 1],
+//     };
+//   },
+//   async fetchStockPrice(symbol) {
+//     try {
+//       const response = await axios.get(BASE_URL, {
+//         params: {
+//           function: 'GLOBAL_QUOTE',
+//           symbol: symbol,
+//           apikey: API_KEY,
+//         },
+//       });
+
+//       if (response.data && response.data['Global Quote']) {
+//         return response.data['Global Quote']['05. price'];
+//       } else {
+//         throw new Error('Invalid response from API');
+//       }
 //     } catch (error) {
-//       console.error("Error fetching stock data:", error);
-//       return {
-//         dates: [],
-//         prices: [],
-//         price: 0,
-//       };
+//       console.error('Error fetching stock price:', error);
+//       return 0;
 //     }
 //   },
 // };
-
-// export default StockDataService;

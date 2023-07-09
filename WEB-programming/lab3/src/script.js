@@ -31,52 +31,60 @@ const depositForm = document.getElementById('deposit-form');
 const result = document.getElementById('result');
 
 const depositOptions = {
-replenishable: {
-    '6 месяцев': 0.2,
-    '1 год': 0.22,
-    '1,5 года': 0.15,
-    '2 года': 0.1
-},
-term: {
-    '3 месяца': 0.2,
-    '6 месяцев': 0.22,
-    '9 месяцев': 0.23,
-    '1 год': 0.24,
-    '1,5 года': 0.18,
-    '2 года': 0.15
-}
+    replenishable: {
+        '6 месяцев': 0.2,
+        '1 год': 0.22,
+        '1,5 года': 0.15,
+        '2 года': 0.1
+    },
+    term: {
+        '3 месяца': 0.2,
+        '6 месяцев': 0.22,
+        '9 месяцев': 0.23,
+        '1 год': 0.24,
+        '1,5 года': 0.18,
+        '2 года': 0.15
+    },
+    months: {
+        '3 месяца': 3,
+        '6 месяцев': 6,
+        '9 месяцев': 9,
+        '1 год': 12,
+        '1,5 года': 18,
+        '2 года': 24
+    }
 };
 
 function updateDepositTerms() {
-const type = depositType.value;
-const terms = depositOptions[type];
-
-depositTerm.innerHTML = '';
-for (const term in terms) {
-    const option = document.createElement('option');
-    option.value = term;
-    option.textContent = term;
-    depositTerm.appendChild(option);
-}
+    const type = depositType.value;
+    const terms = depositOptions[type];
+   
+    depositTerm.innerHTML = '';
+    for (const term in terms) {
+        const option = document.createElement('option');
+        option.value = term;
+        option.textContent = term;
+        depositTerm.appendChild(option);
+    }
 }
 
 depositType.addEventListener('change', updateDepositTerms);
 
 depositForm.addEventListener('submit', (event) => {
-event.preventDefault();
+    event.preventDefault();
 
-const type = depositType.value;
-const term = depositTerm.value;
-const amount = parseFloat(depositAmount.value);
-const rate = depositOptions[type][term];
+    const type = depositType.value;
+    const term = depositTerm.value;
+    const amount = parseFloat(depositAmount.value);
+    const rate = depositOptions[type][term];
 
-const termInMonths = parseInt(term.split(' ')[0]);
-const finalAmount = amount * (1 + rate * termInMonths / 12);
+    const termInMonths = depositOptions.months[term];
+    const finalAmount = amount * (1 + rate * termInMonths / 12);
 
-result.innerHTML = `Вид вклада: ${type === 'replenishable' ? 'Пополняемый' : 'Срочный'}<br>
-                    Срок вклада: ${term}<br>
-                    Сумма вклада: ${amount.toFixed(2)}<br>
-                    Сумма в конце срока: ${finalAmount.toFixed(2)}`;
+    result.innerHTML = `Вид вклада: ${type === 'replenishable' ? 'Пополняемый' : 'Срочный'}<br>
+                        Срок вклада: ${term}<br>
+                        Сумма вклада: ${amount.toFixed(2)}<br>
+                        Сумма в конце срока: ${finalAmount.toFixed(2)}`;
 });
 
 updateDepositTerms();

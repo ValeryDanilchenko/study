@@ -96,7 +96,7 @@ export default {
     async fetchStockData() {
       const apiKey = "TB46Y2SQFVGPS4U7";
       const url = `https://www.alphavantage.co/query?function=TIME\_SERIES\_INTRADAY&symbol=${this.symbol}&interval=60min&apikey=${apiKey}`;
-      console.log('URL ', url);
+      // console.log('URL ', url);
 
       let timeSeries = null;
 
