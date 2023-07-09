@@ -1,0 +1,4 @@
+﻿  LCS.cpp
+C:\Users\Empar\Documents\Учеба\Алгоритмы и структуры данных\LCS\LCS\LCS.cpp(56,21): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Empar\Documents\Учеба\Алгоритмы и структуры данных\LCS\LCS\LCS.cpp(57,21): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  LCS.vcxproj -> C:\Users\Empar\Documents\Учеба\Алгоритмы и структуры данных\LCS\x64\Debug\LCS.exe
