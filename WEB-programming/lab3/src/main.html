@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Отчет. Лабораторная 3</title>
+        <link rel="icon" type="image/png" href="img/favicon.png">
+	</head>
+	<body>
+		<header class="header">
+			<div class="header_top">
+				<div class="header_logo">
+					<a href="https://www.nstu.ru/">
+						<img src="img/logo.png" alt="Лого">
+					</a>
+				</div>
+				<div class="header_body">
+					<h1>НОВОСИБИРСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ</h1>
+					<h2>ФАКУЛЬТЕТ АВТОМАТИКИ И ВЫЧИСЛИТЕЛЬНОЙ ТЕХНИКИ</h2>
+					<h2>КАФЕДРА АВТОМАТИЗИРОВАННЫХ СИСТЕМ УПРАВЛЕНИЯ</h2>
+				</div>
+			</div>				
+		</header>
+		<main class="main">
+			<div class="report_container" style="	background-image: url('img/bg.png');">
+				<div class="report_header">
+					<h2>Отчет по лабораторной работе №3</h2>
+					<h3>Использование npm, webpack и REST API</h3>
+				</div>
+				<div class="report_names">
+					<table class="table">
+						<tr><th>Выполнили:</th><th>Проверил:</th></tr>
+						<tr><td>Студенты группы АВТ-013</td><td></td></tr>
+						<tr>
+							<td>Данильченко В.С.<br>Чадоев И.М.<br>Баяндиева К.Б.<br></td>
+							<td>Хворостов В.А.<br></td>
+						</tr>
+					</table>
+				</div>
+			</div>            
+
+            <div class="info-block">
+                <h2 class="task_title">Задание 1. Реализовать блок-слайдер</h2>
+                <div class="content">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-image">
+                                    <img src="img/swiper/img1.png" alt="Image 1" onclick="window.open('https:/swiperjs.com/', '_blank')">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-image">
+                                    <img src="img/swiper/img2.png" alt="Image 2" onclick="window.open('https:/github.com/ValeryDanilchenko', '_blank')">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-image">
+                                    <img src="img/swiper/img3.png" alt="Image 3" onclick="window.open('https:/dispace.edu.nstu.ru/didesk/course/show/12824', '_blank')">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-block">
+                <h2 class="task_title">Задание 2. Реализовать калькулятор вкладов</h2>
+                <div class="form-container">
+                    <form id="deposit-form">
+                        <label>
+                            Вид вклада:
+                            <select id="deposit-type">
+                                <option value="replenishable">Пополняемый</option>
+                                <option value="term">Срочный</option>
+                            </select>
+                        </label>
+                        <label>
+                            Срок вклада:
+                            <select id="deposit-term"></select>
+                        </label>
+                        <label>
+                            Сумма вклада:
+                            <input type="number" id="deposit-amount" min="0" step="any" required>
+                        </label>
+                        <button type="submit">Рассчитать</button>
+                    </form>
+                    <div class="result-container">
+                        <div id="result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block" id="widget">
+                <h2 class="task_title">Задание 3. Виджет с сайта HH.ru</h2>                
+            </div>
+		</main>
+		<footer class="footer">
+			<div class="footer_text">
+				<p>© 2023 Новосибирский государственный технический университет. Все права защищены.</p>
+			</div>
+			<div class="footer_image">
+				<a href="https://www.nstu.ru/">
+					<img src="img/footer_logo.png" alt="Логотип в подвале">
+				</a>
+			</div>
+		</footer>
+
+        <script src="../dist/bundle.js"></script>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Задание 1.1</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+          .Whois-card {
+                background-color: #ffffff;
+                border: 1px solid #cccccc;
+                border-radius: 5px;
+                padding: 20px;
+                margin-left: 25%;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+                width: 50%;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+            }
+
+            .list {
+                list-style-type: none;
+                padding: 0;
+                font-family: monospace;
+                font-size: 1rem;
+            }
+
+            .list_element {
+                display: flex;
+            }
+
+            .key {
+                margin-right: 1em;
+                font-weight: bold;
+            }
+
+            .value {
+                flex-grow: 1;
+            }
+
+            .update_info {
+                font-style: italic;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header class="header">
+                <div class="header_top">
+                    <div class="header_logo">
+                      <a href="../main.html">
+                        <img src="../img/logo.png" alt="Лого">
+                      </a>
+                    </div>
+                    <div class="header_body">
+                      <h1>НОВОСИБИРСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ</h1>
+                      <h2>ФАКУЛЬТЕТ АВТОМАТИКИ И ВЫЧИСЛИТЕЛЬНОЙ ТЕХНИКИ</h2>
+                      <h2>КАФЕДРА АВТОМАТИЗИРОВАННЫХ СИСТЕМ УПРАВЛЕНИЯ</h2>
+                    </div>
+                </div>
+                <div class="header_bottom">
+                    <h2>ЗАДАНИЕ 1.1</h2>
+                    <h3>На сайте nic.ru воспользоваться сервисом whois – узнать информацию о доменах yandex.ru, google.com, ngs.ru.</h3>
+                </div>
+        </header>
+        <main>
+            <div calss="task">
+                <div class="info-block">
+                    <h2 class="task_title">Информация о домене yandex.ru</h2>
+                    <div class="Whois-card">
+                        <div class="card_header">Информация по данным whois.nic.ru</div>
+                        <ul class="list">
+                            <li class="list_element"><span class="key">domain:</span><span class="value">YANDEX.RU</span></li>
+                            <li class="list_element"><span class="key">nserver:</span><span class="value">ns1.yandex.ru 213.180.193.1, 2a02:6b8::1</span></li>
+                            <li class="list_element"><span class="key">nserver:</span><span class="value">ns2.yandex.ru 93.158.134.1, 2a02:6b8:0:1::1</span></li>
+                            <li class="list_element"><span class="key">state:</span><span class="value">REGISTERED, DELEGATED</span></li>
+                            <li class="list_element"><span class="key">admin-contact:
+                              </span><span class="value">
+                                <a href="https://www.nic.ru/whois/send-message/?domain=yandex.ru" target="_blank">https://www.nic.ru/whois/send-message/?domain=yandex.ru</a>
+                              </span></li>
+                            <li class="list_element"><span class="key">org:</span><span class="value">YANDEX, LLC.</span></li>
+                            <li class="list_element"><span class="key">registrar:</span><span class="value">RU-CENTER-RU</span></li>
+                            <li class="list_element"><span class="key">created:</span><span class="value">1997.09.23</span></li>
+                            <li class="list_element"><span class="key">paid-till:</span><span class="value">2023.10.01</span></li>
+                            <li class="list_element"><span class="key">source:</span><span class="value">RU-CENTER</span></li>
+                            <li class="update_info">&gt;&gt;&gt; Last update of WHOIS database: 2023.05.22T12:42:09Z &lt;&lt;&lt;</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div calss="task">
+                <div class="info-block">
+                    <h2 class="task_title">Информация о домене google.com</h2>
+                    <div class="Whois-card" >
+                        <div class="card_header">Информация по данным whois.verisign-grs.com</div>
+                        <ul class="list">
+                            <li class="list_element"><span class="key">domain:</span><span class="value">GOOGLE.COM</span></li>
+                            <li class="list_element"><span class="key">nserver:</span><span class="value">NS1.GOOGLE.COM</span></li>
+                            <li class="list_element"><span class="key">nserver:</span><span class="value">NS2.GOOGLE.COM</span></li>
+                            <li class="list_element"><span class="key">state:</span><span class="value">REGISTERED, DELEGATED</span></li>
+                            <li class="list_element"><span class="key">admin-contact:
+                            </span><span class="value">
+                              <a href="https://www.nic.ru/whois/send-message/?domain=yandex.ru" target="_blank">https://www.nic.ru/whois/send-message/?domain=google.com</a>
+                            </span></li>
+                            <li class="list_element"><span class="key">org:</span><span class="value">GOOGLE, LLC.</span></li>
+                            <li class="list_element"><span class="key">registrar:</span><span class="value">MarkMonitor Inc.</span></li>
+                            <li class="list_element"><span class="key">created:</span><span class="value">1997-09-15T04:00:00Z</span></li>
+                            <li class="update_info">&gt;&gt;&gt; Last update of whois database: 2023-05-22T18:28:22Z &lt;&lt;&lt;</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div calss="task">
+              <div class="info-block">
+                <h2 class="task_title">Информация о домене ngs.ru</h2>
+                    <div class="Whois-card">
+                        <div class="_1HRrS">Информация по данным whois.nic.ru</div>
+                        <ul class="list">
+                            <li class="list_element"><span class="key">domain:</span><span class="value">NGS.RU</span></li>
+                            <li class="list_element"><span class="key">nserver:</span><span class="value">ns1.ngs.ru 195.19.220.238</span></li>
+                            <li class="list_element"><span class="key">nserver:</span><span class="value">ns.hsdrn.ru</span></li>
+                            <li class="list_element"><span class="key">state:</span><span class="value">REGISTERED, DELEGATED</span></li>
+                            <li class="list_element"><span class="key">admin-contact:</span><span class="value"><a href="https://www.nic.ru/whois/send-message/?domain=ngs.ru" target="_blank">https://www.nic.ru/whois/send-message/?domain=ngs.ru</a></span></li>
+                            <li class="list_element"><span class="key">org:</span><span class="value">INTERNET TEHNOLOGII LLC</span></li>
+                            <li class="list_element"><span class="key">registrar:</span><span class="value">RU-CENTER-RU</span></li>
+                            <li class="list_element"><span class="key">created:</span><span class="value">1999.11.05</span></li>
+                            <li class="list_element"><span class="key">paid-till:</span><span class="value">2023.12.01</span></li>
+                            <li class="list_element"><span class="key">source:</span><span class="value">RU-CENTER</span></li>
+                            <li class="update_info">&gt;&gt;&gt; Last update of WHOIS database: 2023.05.22T21:38:16Z &lt;&lt;&lt;</li>
+                        </ul>
+                  </div>          
+              </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer_text">
+                <p>© 2023 Новосибирский государственный технический университет. Все права защищены.</p>
+            </div>
+            <div class="footer_image">
+                <a href="https://www.nstu.ru/">
+                  <img src="../img/footer_logo.png" alt="Логотип в подвале">
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
